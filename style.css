@@ -1,0 +1,155 @@
+:root {
+
+    --clr-primary-bg: hsl(0, 100%, 74%);
+    --clr-primary-submit: hsl(154, 59%, 51%);
+
+    --clr-accent-membership: hsl(248, 32%, 49%);
+
+    --clr-neutral-input:hsl(249, 10%, 26%);
+    --clr-neutral-show:hsl(246, 25%, 77%);
+}
+
+html,
+body,
+h1,
+p,
+form {
+    display: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Table of contents
+
+1. Global stlyes
+
+2. Typography
+
+3. Components
+
+4. Animation
+
+5. Media Query
+
+*/
+
+
+/* ================
+   1. Global styles
+   ================ */
+
+body {
+    background-image: url(/images/bg-intro-desktop.png);
+    background-color: var(--clr-primary-bg);
+    color: #FFF;
+}
+
+.membership {
+    background-color: var(--clr-accent-membership);
+}
+
+input[type=submit] {
+    background-color: var(--clr-primary-submit);
+    color: #FFF;
+}
+
+.terms-and-services-button {
+    color: var(--clr-neutral-show);
+}
+
+.sign-in-form {
+    background-color: #FFF;
+}
+
+.terms-and-services-button span {
+    color: var(--clr-primary-bg);
+}
+
+input {
+    color: var(--clr-neutral-input);
+}
+
+/* ================
+   2. Typography
+   ================ */
+
+body,
+input {
+    font-size: 1rem;
+    font-family: Poppins;
+    line-height: 1.6;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.membership span {
+    font-weight: 600;
+}
+
+input[type=submit] {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.terms-and-services-button {
+    font-size: .7rem;
+}
+
+input {
+    font-weight: 500;
+}
+
+/* ================
+   3. Components
+   ================ */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    width: 70%;
+    max-width: 60rem;
+    min-height: 30rem;
+    border: solid rebeccapurple;
+}
+
+.sign-in-sec,
+.text {
+    border: solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-in-sec {
+    width: 60rem;
+    justify-content: space-between;
+}
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+.membership {
+    width: 100%;
+    text-align: center;
+    padding-block: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
