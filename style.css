@@ -40,6 +40,7 @@ form {
    1. Global styles
    ================ */
 
+
 body {
     background-image: url(/images/bg-intro-desktop.png);
     background-color: var(--clr-primary-bg);
@@ -71,13 +72,18 @@ input {
     color: var(--clr-neutral-input);
 }
 
+
+.warning {
+    color: var(--clr-primary-bg);
+}
+
 /* ================
    2. Typography
    ================ */
 
 body,
 input {
-    font-size: 1rem;
+    font-size: clamp(.9rem, 2vw, 1rem);
     font-family: Poppins;
     line-height: 1.6;
 }
@@ -97,7 +103,8 @@ input[type=submit] {
     text-transform: uppercase;
 }
 
-.terms-and-services-button {
+.terms-and-services-button, 
+.warning {
     font-size: .7rem;
 }
 .sign-in-form span {
@@ -108,9 +115,11 @@ input {
     font-weight: 500;
 }
 
+
 /* ================
    3. Components
    ================ */
+
 
 body {
     min-height: 100vh;
@@ -150,37 +159,35 @@ h1 {
 .membership {
     width: 100%;
     text-align: center;
-    padding-block: 1em;
+    padding: 1em 0;
     margin-bottom: 1.5em;
     border-radius: .5rem;
     box-shadow: 0 .5rem rgba(0, 0, 0, 0.2);
 }
-.membership p{
-    padding-inline: 3em;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-}
 
 .sign-in-form {
     height: 100%;
-    padding: clamp(1.5em, 3vw, 2.5em);
+    padding: clamp(1.5em, 5vw, 2.5em);
     border-radius: .5rem;
     box-shadow: 0 .5rem rgba(0, 0, 0, 0.2);
 }
 
 input {
+    box-sizing: border-box;
     padding: .8em;
     padding-left: 2em;
-    margin-bottom: clamp(1em, 5vw, 1.5em);
+    
     border-radius: .4rem;
     border: 1px solid var(--clr-neutral-show);
     outline: none;
+    width: 100%;
 }
+
+.form-control{
+    margin-bottom: clamp(1em, 3vw, 1.5em);
+    position: relative;
+}
+
 
 input[type=text]:focus,
 input[type=email]:focus,
@@ -206,6 +213,36 @@ input[type=submit]:hover {
     text-align: center;
 }
 
+.check-icon {
+    visibility: hidden;
+    content: url(./images/icon-error.svg);
+    position: absolute;
+    top: 15px;
+    right: 1.5rem;
+}
+
+.warning {
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+}
+
+.form-control.error input {
+    border-color: var(--clr-primary-bg);
+}
+
+.form-control.success input {
+    border-color: var(--clr-primary-submit);
+}
+
+.form-control.error icon.check-icon {
+    visibility: visible;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
 @media all and (max-width: 1110px) {
     .container {
         flex-direction: column;
@@ -228,4 +265,8 @@ input[type=submit]:hover {
         padding: 0;
     }
 
+    .membership p{
+        padding: 0 4em;
+    }
+    
 }
