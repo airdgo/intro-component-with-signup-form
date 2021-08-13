@@ -51,7 +51,7 @@ body {
     background-color: var(--clr-accent-membership);
 }
 
-input[type=submit] {
+button {
     background-color: var(--clr-primary-submit);
     color: #FFF;
 }
@@ -82,7 +82,8 @@ input {
    ================ */
 
 body,
-input {
+input,
+button {
     font-size: clamp(.9rem, 2vw, 1rem);
     font-family: Poppins;
     line-height: 1.6;
@@ -98,7 +99,7 @@ h1 {
     font-weight: 600;
 }
 
-input[type=submit] {
+button {
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -176,7 +177,6 @@ input {
     box-sizing: border-box;
     padding: .8em;
     padding-left: 2em;
-    
     border-radius: .4rem;
     border: 1px solid var(--clr-neutral-show);
     outline: none;
@@ -195,19 +195,21 @@ input[type=password]:focus {
     border: 1px solid var(--clr-neutral-input);
 }
 
-input[type=submit] {
+button {
+    width: 100%;
+    height: 3.5rem;
+    border: none;
+    border-radius: .4rem;
     margin-bottom: .7em;
     box-shadow: inset 0 -.2rem rgba(0, 0, 0, 0.2);
 }
 
-input[type=submit]:hover {
+
+button:hover {
     cursor: pointer;
-}
-
-
-input[type=submit]:hover {
     opacity: 80%;
 }
+
 
 .sign-in-form p {
     text-align: center;
@@ -225,10 +227,12 @@ input[type=submit]:hover {
     visibility: hidden;
     position: absolute;
     right: 0;
+    top: 3.7rem;
 }
 
 .form-control.error input {
     border-color: var(--clr-primary-bg);
+    margin-bottom: 1em;
 }
 
 .form-control.success input {
@@ -246,7 +250,7 @@ input[type=submit]:hover {
 @media all and (max-width: 1110px) {
     .container {
         flex-direction: column;
-        width: clamp(20rem, 70%, 37rem);
+        width: clamp(18rem, 70%, 37rem);
         margin: 5em 0;
     }
 
