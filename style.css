@@ -134,6 +134,7 @@ body {
     display: flex;
     width: min(78%, 70rem);
     min-height: 34.5rem;
+    overflow-x: hidden;
 }
 
 .sign-in-sec,
